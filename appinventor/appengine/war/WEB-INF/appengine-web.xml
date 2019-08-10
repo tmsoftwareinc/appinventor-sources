@@ -173,17 +173,17 @@
     <property name="firebase.secret" value="" />
     <property name="firebase.url" value="" />
 
-    <property name="library.url" value="http://appinventor.mit.edu/explore/library" />
-    <property name="get_started.url" value="http://appinventor.mit.edu/explore/get-started" />
-    <property name="tutorials.url" value="http://appinventor.mit.edu/explore/ai2/tutorials" />
-    <property name="extensions.url" value="http://appinventor.mit.edu/extensions" />
-    <property name="troubleshooting.url" value="http://appinventor.mit.edu/explore/ai2/support/troubleshooting" />
-    <property name="forums.url" value="https://groups.google.com/forum/#!forum/mitappinventortest" />
-    <property name="feedback.url" value="http://something.example.com" />
+    <property name="library.url" value="https://appinventor.tmsoftwareinc.com/library/" />
+    <property name="get_started.url" value="https://appinventor.tmsoftwareinc.com/get-started/" />
+    <property name="tutorials.url" value="https://appinventor.tmsoftwareinc.com/tutorials/" />
+    <property name="extensions.url" value="https://appinventor.tmsoftwareinc.com/extensions/" />
+    <property name="troubleshooting.url" value="https://appinventor.tmsoftwareinc.com/troubleshooting/" />
+    <property name="forums.url" value="https://groups.google.com/forum/?hl=ja#!forum/appinventorjapan" />
+    <property name="feedback.url" value="https://www.facebook.com/groups/AppInventorJapan/" />
     <property name="release.notes.url" value="http://appinventor.mit.edu/ai2/ReleaseNotes.html" />
     <property name="tos.url" value="/about/termsofservice.html" />
     <property name="logo.url" value="http://appinventor.mit.edu" />
-    <property name="guide.url" value="http://appinventor.mit.edu/explore/library" />
+    <property name="guide.url" value="https://appinventor.tmsoftwareinc.com/library/" />
     <property name="reference.components.url" value="/reference/components/" />
 
     <!-- CloudDB secret keys -->

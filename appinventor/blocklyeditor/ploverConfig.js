@@ -8,6 +8,7 @@
 
     // Blockly core translations
     //msg/js/*.js has to come next (for constants)
+    '../lib/blockly/msg/js/ja.js',
     '../lib/blockly/msg/js/ko.js',
     '../lib/blockly/msg/js/es.js',
     '../lib/blockly/msg/js/zh-hant.js',
@@ -25,6 +26,7 @@
     '../lib/blockly/msg/js/en.js',
 
     // App Inventor-specific translations
+    './src/msg/ja_jp/_messages.js',
     './src/msg/ko_kr/_messages.js',
     './src/msg/es_es/_messages.js',
     './src/msg/zh_tw/_messages.js',

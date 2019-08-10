@@ -12,6 +12,7 @@
 goog.provide('Blockly.language_switch');
 
 goog.require('AI.Blockly.Msg.en');
+goog.require('AI.Blockly.Msg.ja_jp');
 goog.require('AI.Blockly.Msg.zh_cn');
 goog.require('AI.Blockly.Msg.zh_tw');
 goog.require('AI.Blockly.Msg.es_es');
@@ -33,6 +34,10 @@ Blockly.language_switch = {
       Blockly.mainWorkspace.clear();
     }
     switch (language) {
+      case 'ja_JP':
+        Blockly.Msg.ja.switch_blockly_language_to_ja.init();
+        Blockly.Msg.ja.switch_language_to_japanese.init();
+        break;
       case 'ko_KR':
         Blockly.Msg.ko.switch_blockly_language_to_ko.init();
         Blockly.Msg.ko.switch_language_to_korean.init();

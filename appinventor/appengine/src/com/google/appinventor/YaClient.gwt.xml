@@ -107,6 +107,8 @@
 
   <!-- English language, independent of country -->
   <extend-property name="locale" values="en"/>
+  <!-- Japanese -->
+  <extend-property name="locale" values="ja_JP"/>
   <!-- Simplified Chinese -->
   <extend-property name="locale" values="zh_CN"/>
   <!-- Traditional Chinese -->
