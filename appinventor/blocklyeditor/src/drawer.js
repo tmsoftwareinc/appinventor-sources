@@ -234,7 +234,9 @@ Blockly.Drawer.createBlockInfoArray_ = function() {
       {type:"lists_lookup_in_pairs", input:{
         "NOTFOUND":{inputType:"value", blockInfo:{type:"text", fieldNameToValue:{"TEXT":"not found"}}}
       }},
-      {type:"lists_join_with_separator"}
+      {type:"lists_join_with_separator", input:{
+        "SEPARATOR":{inputType:"value", blockInfo:{type:"text", fieldNameToValue:{"TEXT":""}}}
+      }}
     ],
     "cat_Colors": [
       {type:"color_black"},
