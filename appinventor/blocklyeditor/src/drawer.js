@@ -148,7 +148,6 @@ Blockly.Drawer.createBlockInfoArray_ = function() {
         "STEP":{inputType:"value",blockInfo:{type:"math_number",fieldNameToValue:{"NUM":"1"}}}
       }},
       {type:"controls_forEach"},
-      {type:"controls_break"},
       {type:"controls_while"},
       {type:"controls_choose"},
       {type:"controls_do_then_return"},
@@ -160,7 +159,8 @@ Blockly.Drawer.createBlockInfoArray_ = function() {
       {type:"controls_closeScreenWithValue"},
       {type:"controls_closeApplication"},
       {type:"controls_getPlainStartText"},
-      {type:"controls_closeScreenWithPlainText"}
+      {type:"controls_closeScreenWithPlainText"},
+      {type:"controls_break"}
     ],
     "cat_Math": [
       {type:"math_number"},
@@ -217,8 +217,6 @@ Blockly.Drawer.createBlockInfoArray_ = function() {
       {type:"lists_is_in"},
       {type:"lists_length"},
       {type:"lists_is_empty"},
-      {type:"lists_reverse"},
-      {type:"lists_join_with_separator"},
       {type:"lists_pick_random_item"},
       {type:"lists_position_in"},
       {type:"lists_select_item"},
@@ -228,13 +226,15 @@ Blockly.Drawer.createBlockInfoArray_ = function() {
       {type:"lists_append_list"},
       {type:"lists_copy"},
       {type:"lists_is_list"},
+      {type:"lists_reverse"},
       {type:"lists_to_csv_row"},
       {type:"lists_to_csv_table"},
       {type:"lists_from_csv_row"},
       {type:"lists_from_csv_table"},
       {type:"lists_lookup_in_pairs", input:{
         "NOTFOUND":{inputType:"value", blockInfo:{type:"text", fieldNameToValue:{"TEXT":"not found"}}}
-      }}
+      }},
+      {type:"lists_join_with_separator"}
     ],
     "cat_Colors": [
       {type:"color_black"},
