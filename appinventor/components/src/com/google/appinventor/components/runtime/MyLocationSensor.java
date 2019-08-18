@@ -57,10 +57,10 @@ import java.util.Set;
 public class MyLocationSensor extends AndroidNonvisibleComponent
     implements Component, OnStopListener, OnResumeListener, Deleteable {
 
-  public interface LocationSensorListener extends LocationListener {
+  public interface MyLocationSensorListener extends LocationListener {
     void onTimeIntervalChanged(int time);
     void onDistanceIntervalChanged(int distance);
-    void setSource(LocationSensor provider);
+    void setSource(MyLocationSensor provider);
   }
 
   /**
@@ -97,7 +97,7 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
             @Override
             public void run() {
               LocationChanged(argLatitude, argLongitude, argAltitude, argSpeed);
-              for (LocationSensorListener listener : listeners) {
+              for (MyLocationSensorListener listener : listeners) {
                 listener.onLocationChanged(location);
               }
             }
@@ -163,7 +163,7 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
   private final Handler handler;
   private final LocationManager locationManager;
 
-  private final Set<LocationSensorListener> listeners = new HashSet<LocationSensorListener>();
+  private final Set<MyLocationSensorListener> listeners = new HashSet<MyLocationSensorListener>();
 
   private boolean providerLocked = false; // if true we can't change providerName
   private String providerName;
@@ -204,7 +204,7 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
   private boolean enabled = true;  // the default value is true
 
   private boolean havePermission = false; // Do we have the necessary permission
-  private static final String LOG_TAG = LocationSensor.class.getSimpleName();
+  private static final String LOG_TAG = MyLocationSensor.class.getSimpleName();
 
   /**
    * Creates a new LocationSensor component.
@@ -334,7 +334,7 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
           RefreshProvider("TimeInterval");
       }
 
-      for (LocationSensorListener listener : listeners) {
+      for (MyLocationSensorListener listener : listeners) {
         listener.onTimeIntervalChanged(timeInterval);
       }
   }
@@ -367,7 +367,7 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
           RefreshProvider("DistanceInterval");
       }
 
-      for (LocationSensorListener listener : listeners) {
+      for (MyLocationSensorListener listener : listeners) {
         listener.onDistanceIntervalChanged(distanceInterval);
       }
   }
@@ -582,7 +582,7 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
   public void RefreshProvider(final String caller) {
     if (!initialized) return;    // Not yet ready to start...
     stopListening();             // In case another provider is active.
-    final LocationSensor me = this;
+    final MyLocationSensor me = this;
     if (!havePermission) {
       // Make sure we do this on the UI thread
       androidUIHandler.post(new Runnable() {
@@ -684,12 +684,12 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
     stopListening();
   }
 
-  public void addListener(LocationSensorListener listener) {
+  public void addListener(MyLocationSensorListener listener) {
     listener.setSource(this);
     listeners.add(listener);
   }
 
-  public void removeListener(LocationSensorListener listener) {
+  public void removeListener(MyLocationSensorListener listener) {
     listeners.remove(listener);
     listener.setSource(null);
   }
