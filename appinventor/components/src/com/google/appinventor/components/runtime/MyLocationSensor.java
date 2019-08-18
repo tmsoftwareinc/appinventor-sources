@@ -211,7 +211,7 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
    *
    * @param container  ignored (because this is a non-visible component)
    */
-  public LocationSensor(ComponentContainer container) {
+  public MyLocationSensor(ComponentContainer container) {
     this(container, true);
   }
 
@@ -221,7 +221,7 @@ public class MyLocationSensor extends AndroidNonvisibleComponent
    * @param container  ignored (because this is a non-visible component)
    * @param enabled  true if the LocationSensor is enabled by default, otherwise false.
    */
-  public LocationSensor(ComponentContainer container, boolean enabled) {
+  public MyLocationSensor(ComponentContainer container, boolean enabled) {
     super(container.$form());
     this.enabled = enabled;
     handler = new Handler();
