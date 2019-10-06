@@ -1615,6 +1615,7 @@ public class Ode implements EntryPoint {
    * @param showDialog Convenience variable to show the created DialogBox.
    * @return The created and optionally displayed Dialog box.
    */
+   /*
   public DialogBox createNoProjectsDialog(boolean showDialog) {
     final NoProjectDialogBox dialogBox = new NoProjectDialogBox();
     
@@ -1622,6 +1623,59 @@ public class Ode implements EntryPoint {
       dialogBox.show();
     }
   
+    return dialogBox;
+  }
+  */
+  public DialogBox createNoProjectsDialog(boolean showDialog) {
+    // Create the UI elements of the DialogBox
+    final DialogBox dialogBox = new DialogBox(true, false); //DialogBox(autohide, modal)
+    dialogBox.setStylePrimaryName("ode-DialogBox");
+    dialogBox.setText(MESSAGES.createNoProjectsDialogText());
+
+    Grid mainGrid = new Grid(2, 2);
+    mainGrid.getCellFormatter().setAlignment(0,
+        0,
+        HasHorizontalAlignment.ALIGN_CENTER,
+        HasVerticalAlignment.ALIGN_MIDDLE);
+    mainGrid.getCellFormatter().setAlignment(0,
+        1,
+        HasHorizontalAlignment.ALIGN_CENTER,
+        HasVerticalAlignment.ALIGN_MIDDLE);
+    mainGrid.getCellFormatter().setAlignment(1,
+        1,
+        HasHorizontalAlignment.ALIGN_RIGHT,
+        HasVerticalAlignment.ALIGN_MIDDLE);
+
+    Image dialogImage = new Image(Ode.getImageBundle().codiVert());
+
+    Grid messageGrid = new Grid(2, 1);
+    messageGrid.getCellFormatter().setAlignment(0,
+        0,
+        HasHorizontalAlignment.ALIGN_JUSTIFY,
+        HasVerticalAlignment.ALIGN_MIDDLE);
+    messageGrid.getCellFormatter().setAlignment(1,
+        0,
+        HasHorizontalAlignment.ALIGN_LEFT,
+        HasVerticalAlignment.ALIGN_MIDDLE);
+
+    Label messageChunk1 = new HTML(MESSAGES.createNoProjectsDialogMessage1());
+
+    messageChunk1.setWidth("23em");
+    Label messageChunk2 = new Label(MESSAGES.createNoprojectsDialogMessage2());
+
+    // Add the elements to the grids and DialogBox.
+    messageGrid.setWidget(0, 0, messageChunk1);
+    messageGrid.setWidget(1, 0, messageChunk2);
+    mainGrid.setWidget(0, 0, dialogImage);
+    mainGrid.setWidget(0, 1, messageGrid);
+
+    dialogBox.setWidget(mainGrid);
+    dialogBox.center();
+
+    if (showDialog) {
+      dialogBox.show();
+    }
+
     return dialogBox;
   }
 
