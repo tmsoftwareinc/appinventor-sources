@@ -598,6 +598,7 @@ Blockly.Msg.ja.switch_language_to_japanese = {
 
     Blockly.Msg.LANG_TEXT_COMPARE_LT = ' <';
     Blockly.Msg.LANG_TEXT_COMPARE_EQUAL = ' =';
+    Blockly.Msg.LANG_TEXT_COMPARE_NEQ = ' ≠';
     Blockly.Msg.LANG_TEXT_COMPARE_GT = ' >';
     Blockly.Msg.LANG_TEXT_COMPARE_HELPURL = '/reference/blocks/text.html#compare';
     Blockly.Msg.LANG_TEXT_COMPARE_INPUT_COMPARE = 'テキスト比較';
@@ -608,6 +609,10 @@ Blockly.Msg.ja.switch_language_to_japanese = {
         + 'characters in the same order. This is different from ordinary =\n'
         + 'in the case where the text strings are numbers: 123 and 0123 are =\n'
         + 'but not text =.';
+    Blockly.Msg.LANG_TEXT_COMPARE_TOOLTIP_NEQ = 'Tests whether text strings are different, ie., don\'t have the same\n'
+        + 'characters in the same order. This is different from ordinary ≠\n'
+        + 'in the case where the text strings are numbers: 123 and 0123 are text ≠\n'
+        + 'but are mathematically =.';
     Blockly.Msg.LANG_TEXT_COMPARE_TOOLTIP_GT = 'Reports whether text1 is lexicographically greater than text2.\n'
         + 'if one text is the prefix of the other, the shorter text is considered smaller.\n'
         + 'Uppercase characters precede lowercase characters.';
@@ -932,6 +937,106 @@ Blockly.Msg.ja.switch_language_to_japanese = {
      Blockly.Msg.LANG_LISTS_SET_INDEX_INPUT_IN_LIST = 'in list';
      Blockly.Msg.LANG_LISTS_SET_INDEX_INPUT_TO = 'to';
      Blockly.Msg.LANG_LISTS_SET_INDEX_TOOLTIP = 'Sets the value at the specified position in a list.';*/
+     
+     // Dictionaries Blocks
+    Blockly.Msg.LANG_CATEGORY_DICTIONARIES = '連想配列(dictionary)';
+    Blockly.Msg.LANG_DICTIONARIES_CREATE_EMPTY_TITLE = '空dictionaryを作成';
+    Blockly.Msg.LANG_DICTIONARIES_CREATE_WITH_EMPTY_HELPURL = '/reference/blocks/dictionaries.html#create-empty-dictionary';
+
+    Blockly.Msg.LANG_DICTIONARIES_MAKE_DICTIONARY_TITLE = 'dictionaryを作成';
+    Blockly.Msg.LANG_DICTIONARIES_MAKE_DICTIONARY_TOOLTIP = 'dictionaryを作成';
+    Blockly.Msg.LANG_DICTIONARIES_MAKE_DICTIONARY_HELPURL = '/reference/blocks/dictionaries.html#make-a-dictionary';
+
+    Blockly.Msg.LANG_DICTIONARIES_CREATE_WITH_CONTAINER_TITLE_ADD = 'dict';
+    Blockly.Msg.LANG_DICTIONARIES_CREATE_WITH_CONTAINER_TOOLTIP = 'Add, remove, or reorder sections to reconfigure this dictionary block.';
+
+    Blockly.Msg.LANG_DICTIONARIES_PAIR_TITLE = 'ペア';
+    Blockly.Msg.LANG_DICTIONARIES_PAIR_TOOLTIP = 'ペアをdictionaryに追加';
+    Blockly.Msg.LANG_DICTIONARIES_PAIR_HELPURL = '/reference/blocks/dictionaries.html#pair';
+
+    Blockly.Msg.LANG_DICTIONARIES_PAIR_INPUT = 'キー %1 値 %2';
+    Blockly.Msg.LANG_DICTIONARIES_PAIR_TOOLTIP = 'キーと値でペアを作成';
+    Blockly.Msg.LANG_DICTIONARIES_MAKE_PAIR_TITLE = 'ペアを作成';
+
+    Blockly.Msg.LANG_DICTIONARIES_SET_PAIR_INPUT = '値をセット：キー %1 dictionary名 %2 値 %3';
+    Blockly.Msg.LANG_DICTIONARIES_SET_PAIR_TITLE = 'dictionaryのペアをセット';
+    Blockly.Msg.LANG_DICTIONARIES_SET_PAIR_TOOLTIP = 'dictionaryのペアをセット';
+    Blockly.Msg.LANG_DICTIONARIES_SET_PAIR_HELPURL = '/reference/blocks/dictionaries.html#set-value-for-key';
+
+    Blockly.Msg.LANG_DICTIONARIES_DELETE_PAIR_INPUT = 'dictionaryからペアを削除：キー %2 dictionary名 %1';
+    Blockly.Msg.LANG_DICTIONARIES_DELETE_PAIR_TITLE = 'dictionaryからペアを削除';
+    Blockly.Msg.LANG_DICTIONARIES_DELETE_PAIR_TOOLTIP = 'dictionaryから指定したキーのペアを削除';
+    Blockly.Msg.LANG_DICTIONARIES_DELETE_PAIR_HELPURL = '/reference/blocks/dictionaries.html#delete-entry-for-key';
+
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_LOOKUP_INPUT = 'ペアの値を取得：キー %1 dictionary名 %2 無い場合に返す値 %3';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_LOOKUP_TOOLTIP = 'dictionaryからキーに対する値を返す';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_LOOKUP_TITLE = 'dictionaryを検索';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_LOOKUP_HELPURL = '/reference/blocks/dictionaries.html#get-value-for-key';
+
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_RECURSIVE_LOOKUP_INPUT = 'ペアの値を取得：キーパス %1 dictionary名 %2 無い場合に返す値 %3';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_RECURSIVE_LOOKUP_TOOLTIP = '入れ子dictionaryからキーパスに対する値を返す';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_RECURSIVE_LOOKUP_TITLE = '再帰的dictionary検索';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_RECURSIVE_LOOKUP_HELPURL = '/reference/blocks/dictionaries.html#get-value-at-key-path';
+
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_RECURSIVE_SET_INPUT = '値をセット：キーパス %1 dictionary名 %2 値 %3';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_RECURSIVE_SET_TOOLTIP = 'キーパスを指定してdictionaryのペアをセット';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_RECURSIVE_SET_TITLE = 'キーパスを指定してdictionaryのペアをセット';
+    Blockly.Msg.LANG_DICTIONARIES_DICTIONARY_RECURSIVE_SET_HELPURL = '/reference/blocks/dictionaries.html#set-value-for-key-path';
+
+    Blockly.Msg.LANG_DICTIONARIES_GETTERS_TITLE = '取得する';
+    Blockly.Msg.LANG_DICTIONARIES_GET_KEYS_TITLE = 'キー';
+    Blockly.Msg.LANG_DICTIONARIES_GET_KEYS_INPUT = 'dictionary';
+    Blockly.Msg.LANG_DICTIONARIES_GET_KEYS_TOOLTIP = 'dictionary内のすべてのキーを返す';
+    Blockly.Msg.LANG_DICTIONARIES_GET_KEYS_HELPURL = '/reference/blocks/dictionaries.html#get-keys';
+    Blockly.Msg.LANG_DICTIONARIES_GET_KEYS_TYPEBLOCK = 'キーを取得する';
+
+    Blockly.Msg.LANG_DICTIONARIES_GET_VALUES_TITLE = '値';
+    Blockly.Msg.LANG_DICTIONARIES_GET_VALUES_INPUT = 'dictionary';
+    Blockly.Msg.LANG_DICTIONARIES_GET_VALUES_TOOLTIP = 'dictionary内のすべての値を返す';
+    Blockly.Msg.LANG_DICTIONARIES_GET_VALUES_HELPURL = '/reference/blocks/dictionaries.html#get-values';
+    Blockly.Msg.LANG_DICTIONARIES_GET_KEYS_TYPEBLOCK = '値を取得する';
+
+    Blockly.Msg.LANG_DICTIONARIES_IS_KEY_IN_INPUT = 'キーがdictionaryに存在するか? キー %1 dictionary名 %2';
+    Blockly.Msg.LANG_DICTIONARIES_IS_KEY_IN_TOOLTIP = 'キーがdictionaryに存在するか調べる';
+    Blockly.Msg.LANG_DICTIONARIES_IS_KEY_IN_TITLE = 'キーがdictionaryに存在するか';
+    Blockly.Msg.LANG_DICTIONARIES_IS_KEY_IN_HELPURL = '/reference/blocks/dictionaries.html#is-key-in-dictionary';
+
+    Blockly.Msg.LANG_DICTIONARIES_LENGTH_TITLE = 'dictionaryサイズ';
+    Blockly.Msg.LANG_DICTIONARIES_LENGTH_INPUT = 'dictionary名';
+    Blockly.Msg.LANG_DICTIONARIES_LENGTH_TOOLTIP = 'dictionary内のキー値のペアの数を返す';
+    Blockly.Msg.LANG_DICTIONARIES_LENGTH_HELPURL = '/reference/blocks/dictionaries.html#size-of-dictionary';
+
+    Blockly.Msg.LANG_DICTIONARIES_ALIST_TO_DICT_TITLE = 'ペアのリストをdictionaryに変換';
+    Blockly.Msg.LANG_DICTIONARIES_ALIST_TO_DICT_INPUT = 'ペア';
+    Blockly.Msg.LANG_DICTIONARIES_ALIST_TO_DICT_TOOLTIP = 'ペアのリストをdictionaryに変換する';
+    Blockly.Msg.LANG_DICTIONARIES_ALIST_TO_DICT_HELPURL = '/reference/blocks/dictionaries.html#list-of-pairs-to-dictionary';
+
+    Blockly.Msg.LANG_DICTIONARIES_DICT_TO_ALIST_TITLE = 'dictionaryをペアのリストに変換';
+    Blockly.Msg.LANG_DICTIONARIES_DICT_TO_ALIST_INPUT = 'dictionary名';
+    Blockly.Msg.LANG_DICTIONARIES_DICT_TO_ALIST_TOOLTIP = 'dictionaryをペアのリストに変換する';
+    Blockly.Msg.LANG_DICTIONARIES_DICT_TO_ALIST_HELPURL = '/reference/blocks/dictionaries.html#dictionary-to-list-of-pairs';
+
+    Blockly.Msg.LANG_DICTIONARIES_COPY_TITLE = 'dictionaryをコピー';
+    Blockly.Msg.LANG_DICTIONARIES_COPY_INPUT = 'dictionary名';
+    Blockly.Msg.LANG_DICTIONARIES_COPY_TOOLTIP = 'dictionaryのコピーを返す';
+    Blockly.Msg.LANG_DICTIONARIES_COPY_HELPURL = '/reference/blocks/dictionaries.html#copy-dictionary';
+
+    Blockly.Msg.LANG_DICTIONARIES_COMBINE_DICTS_INPUT = 'dictionary2をdictionary1にマージ dictionary1 %1 dictionary2 %2';
+    Blockly.Msg.LANG_DICTIONARIES_COMBINE_DICTS_TOOLTIP = 'dictionary2のペアをdictionary1にコピー.';
+    Blockly.Msg.LANG_DICTIONARIES_COMBINE_DICTS_TITLE = 'dictionariesの結合';
+    Blockly.Msg.LANG_DICTIONARIES_COMBINE_DICTS_HELPURL = '/reference/blocks/dictionaries.html#merge-into-dictionary';
+
+    Blockly.Msg.LANG_DICTIONARIES_WALK_TREE_TITLE = 'キーパス内の全リスト生成：キーパス %1 対象dictionaryあるいはリスト %2';
+    Blockly.Msg.LANG_DICTIONARIES_WALK_TREE_TOOLTIP = '対象dictionaryあるいはリストで、キーパスに基づいてそのdictionaryとその子のキーをたどり、ウォークの終わりに見つかったノードのリストを返す';
+    Blockly.Msg.LANG_DICTIONARIES_WALK_TREE_HELPURL = '/reference/blocks/dictionaries.html#list-by-walking-key-path';
+
+    Blockly.Msg.LANG_DICTIONARIES_WALK_TREE_ALL_TITLE = 'レベルのすべてのノード';
+    Blockly.Msg.LANG_DICTIONARIES_WALK_TREE_ALL_TOOLTIP = 'キーパス内の全リスト生成で用いられ、そのレベルのすべてのノードを返す';
+    Blockly.Msg.LANG_DICTIONARIES_WALK_TREE_ALL_HELPURL = '/reference/blocks/dictionaries.html#walk-all-at-level';
+
+    Blockly.Msg.LANG_DICTIONARIES_IS_DICT_TITLE = 'これはdictionaryか? %1';
+    Blockly.Msg.LANG_DICTIONARIES_IS_DICT_TOOLTIP = 'dictionaryかテストする';
+    Blockly.Msg.LANG_DICTIONARIES_IS_DICT_HELPURL = '/reference/blocks/dictionaries.html#is-a-dictionary';
 
 // Variables Blocks.
     Blockly.Msg.LANG_VARIABLES_GLOBAL_DECLARATION_HELPURL = '/reference/blocks/variables.html#global';
@@ -1228,11 +1333,17 @@ Blockly.Msg.ja.switch_language_to_japanese = {
     Blockly.Msg.LANG_COMPONENT_BLOCK_BARCODESCANNER_EVENTS_HELPURL = '/reference/components/sensors.html#BarcodeScanner';
     Blockly.Msg.LANG_COMPONENT_BLOCK_BARCODESCANNER_METHODS_HELPURL = '/reference/components/sensors.html#BarcodeScanner';
 
+    Blockly.Msg.LANG_COMPONENT_BLOCK_BAROMETER_HELPURL = '/reference/components/sensors.html#Barometer';
+
     Blockly.Msg.LANG_COMPONENT_BLOCK_GYROSCOPESENSOR_HELPURL = "/reference/components/sensors.html#GyroscopeSensor";
     Blockly.Msg.LANG_COMPONENT_BLOCK_GYROSCOPESENSOR_PROPERTIES_HELPURL = '/reference/components/sensors.html#GyroscopeSensor';
     Blockly.Msg.LANG_COMPONENT_BLOCK_GYROSCOPESENSOR_EVENTS_HELPURL = '/reference/components/sensors.html#GyroscopeSensor';
     Blockly.Msg.LANG_COMPONENT_BLOCK_GYROSCOPESENSOR_METHODS_HELPURL = '/reference/components/sensors.html#GyroscopeSensor';
 
+    Blockly.Msg.LANG_COMPONENT_BLOCK_HYGROMETER_HELPURL = '/reference/components/sensors.html#Hygrometer';
+
+    Blockly.Msg.LANG_COMPONENT_BLOCK_LIGHTSENSOR_HELPURL = '/reference/components/sensors.html#LightSensor';
+    
     Blockly.Msg.LANG_COMPONENT_BLOCK_LOCATIONSENSOR_HELPURL = "/reference/components/sensors.html#LocationSensor";
     Blockly.Msg.LANG_COMPONENT_BLOCK_LOCATIONSENSOR_PROPERTIES_HELPURL = '/reference/components/sensors.html#LocationSensor';
     Blockly.Msg.LANG_COMPONENT_BLOCK_LOCATIONSENSOR_EVENTS_HELPURL = '/reference/components/sensors.html#LocationSensor';
@@ -1248,6 +1359,12 @@ Blockly.Msg.ja.switch_language_to_japanese = {
     Blockly.Msg.LANG_COMPONENT_BLOCK_ORIENTATIONSENSOR_PROPERTIES_HELPURL = '/reference/components/sensors.html#OrientationSensor';
     Blockly.Msg.LANG_COMPONENT_BLOCK_ORIENTATIONSENSOR_EVENTS_HELPURL = '/reference/components/sensors.html#OrientationSensor';
     Blockly.Msg.LANG_COMPONENT_BLOCK_ORIENTATIONSENSOR_METHODS_HELPURL = '/reference/components/sensors.html#OrientationSensor';
+
+    Blockly.Msg.LANG_COMPONENT_BLOCK_PEDOMETERSENSOR_HELPURL = "/reference/components/sensors.html#Pedometer";
+
+    Blockly.Msg.LANG_COMPONENT_BLOCK_PROXIMITYSENSOR_HELPURL = "/reference/components/sensors.html#ProximitySensor";
+
+    Blockly.Msg.LANG_COMPONENT_BLOCK_THERMOMETER_HELPURL = '/reference/components/sensors.html#Thermometer';
 
 //Social components
     Blockly.Msg.LANG_COMPONENT_BLOCK_CONTACTPICKER_HELPURL = "/reference/components/social.html#ContactPicker";
@@ -1390,6 +1507,8 @@ Blockly.Msg.ja.switch_language_to_japanese = {
     Blockly.Msg.HIDE_WARNINGS = "Hide Warnings";
     Blockly.Msg.MISSING_SOCKETS_WARNINGS = "You should fill all of the sockets with blocks";
     Blockly.Msg.WRONG_TYPE_BLOCK_WARINGS = "This block should be connected to an event block or a procedure definition";
+    Blockly.Msg.ERROR_PROPERTY_SETTER_NEEDS_VALUE = 'This block needs a value block connected to its socket.';
+    Blockly.Msg.ERROR_GENERIC_NEEDS_COMPONENT = 'You need to provide a valid component to this block\'s "%1" socket.';
 
 // Messages from replmgr.js
     Blockly.Msg.REPL_ERROR_FROM_COMPANION = "Error from Companion";
@@ -1482,6 +1601,6 @@ Blockly.Msg.ja.switch_language_to_japanese = {
   }
 };
 
-// Initalize language definition to English
+// Initialize language definition to English
 Blockly.Msg.ja.switch_blockly_language_to_ja.init();
 Blockly.Msg.ja.switch_language_to_japanese.init();
