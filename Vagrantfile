@@ -13,8 +13,8 @@ Vagrant.configure("2") do |config|
   config.vm.boot_timeout = 400
 
   config.vm.provider "virtualbox" do |v|
-    v.name = "ForAppinventor2-bionic64"
-    v.memory = "4096"
+    v.name = "ForAppinventor2JP-bionic64"
+    v.memory = "16384"
     v.customize ["modifyvm", :id, "--usb", "on"]
     # fix for slow network
     v.customize ["modifyvm", :id, "--natdnshostresolver1", "on"]
